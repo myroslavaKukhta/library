@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {BookItem} from "./BookItem";
+import s from './App.module.css'
+import {useSelector} from "react-redux";
+import {RootState} from "./store/store";
+import {AddBookForm} from "./AddBookForm";
 
-export default App;
+type Props = {
+    id: string;
+    title: string;
+    author: string;
+    isRead: boolean;
+    category: string;
+};
+
+export const App = () => {
+
+const books = useSelector((state: RootState) => state.books.books)
+    return (
+        <div className={s.container}>
+            <div className={s.header}>Space Library</div>
+            <BookItem
+                books={books}
+            />
+            <AddBookForm />
+        </div>
+    );
+};

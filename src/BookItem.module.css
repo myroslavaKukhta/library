@@ -1,0 +1,109 @@
+/*.bookItem {*/
+/*  padding: 10px;*/
+/*  border-radius: 4px;*/
+/*  margin-bottom: 10px;*/
+/*  background-color: #fff;*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  cursor: pointer;*/
+/*  */
+/*}*/
+
+/*.bookDetails {*/
+/*  max-width: 70%;*/
+/*  word-wrap: break-word;*/
+/*}*/
+
+/*.bookTitle {*/
+/*  font-weight: bold;*/
+/*  font-size: 1.2rem;*/
+/*  color: #333;*/
+/*}*/
+
+/*.bookAuthor {*/
+/*  font-size: 1rem;*/
+/*  color: #666;*/
+/*}*/
+
+/*.bookCategory {*/
+/*  font-size: 1rem;*/
+/*  color: #666;*/
+/*}*/
+
+/*.button.read {*/
+/*  background-color: #28a745;*/
+/*  color: white;*/
+/*}*/
+
+/*.button.unread {*/
+/*  background-color: #ffc107;*/
+/*  color: white;*/
+/*}*/
+
+/*.button.remove {*/
+/*  background-color: #dc3545;*/
+/*  color: white;*/
+/*}*/
+
+/*.button:hover {*/
+/*  opacity: 0.9;*/
+/*}*/
+.bookItem {
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  min-width: 250px;
+  text-align: left;
+}
+
+.bookItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.bookTitle {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #f1c40f;
+  text-shadow: 0 0 5px rgba(241, 196, 15, 0.8);
+}
+
+.bookAuthor, .bookCategory {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .bookItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .button {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
